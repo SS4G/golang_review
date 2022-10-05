@@ -1,4 +1,4 @@
-package main
+package basic_run
 
 import (
 	"encoding/json"
@@ -107,7 +107,8 @@ func (p *BankClerk) Serialize() string {
 }
 
 // 测试新建结体
-func struct_run() {
+func StructRun() {
+	fmt.Printf("Begin: =================StructRun()=========================\n")
 	student := &Student{"PKU", Human{Name: "HongkaiWang", Age: 30, Gender: true}}
 	bankclerk := &BankClerk{"ICBC", 30000, Human{Name: "Xinyan", Age: 31, Gender: true}}
 	hamster := &Hamster{NickName: "Laohuang", Color: "yellow", Age: 1}
@@ -133,4 +134,5 @@ func struct_run() {
 	if err == nil {
 		fmt.Printf("deserailized bank clerk:=%+v\n", bank_clk_obj)
 	}
+	fmt.Printf("End: =================StructRun()=========================\n")
 }

@@ -1,4 +1,4 @@
-package main
+package basic_run
 
 import (
 	"fmt"
@@ -7,7 +7,8 @@ import (
 )
 
 /** 迭代测试 begin */
-func string_iter_run() {
+func StringIterRun() {
+	fmt.Printf("Begin: =================StringIterRun()=========================\n")
 	var s string
 	s = "abc123@#$我你"
 	fmt.Printf("=======直接迭代字符串 %s======\n", s)
@@ -30,11 +31,14 @@ func string_iter_run() {
 	// 字符串 截取 截取索引需要按照字节索引来 而不是字符索引
 	start_idx := 8
 	end_idx := 15
-	fmt.Printf("=======截取字符串%s 索引[%d:%d] 截取后 %s======\n", s, start_idx, end_idx, s[start_idx:end_idx])
+	fmt.Printf("截取字符串%s 索引[%d:%d] 截取后 %s\n", s, start_idx, end_idx, s[start_idx:end_idx])
+	fmt.Printf("End: =================StringIterRun()=========================\n")
 }
 
 // 字符串数字互转 以及split join
-func str_conv_run() {
+func StrConvRun() {
+	fmt.Printf("Begin: =================StrConvRun()=========================\n")
+
 	// 字符串转换为数字
 	conved_int, _ := strconv.Atoi("4599")
 	fmt.Printf("conved int=%d\n", conved_int)
@@ -59,4 +63,5 @@ func str_conv_run() {
 	contain_bool := strings.Contains(total_str, target_str)
 	contain_idx := strings.Index(total_str, target_str)
 	fmt.Printf("total_str=%s || target_str=%s contain_bool=%t, containe_idx=%d\n", total_str, target_str, contain_bool, contain_idx)
+	fmt.Printf("End: =================StrConvRun()=========================\n")
 }

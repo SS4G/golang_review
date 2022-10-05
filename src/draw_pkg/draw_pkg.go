@@ -1,4 +1,4 @@
-package draw
+package draw_pkg
 
 import "fmt"
 

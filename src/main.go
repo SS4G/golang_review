@@ -1,15 +1,17 @@
 package main
 
+import "basic_run"
+
 //func draw_main() {
 //	p := &Draw.Round{R: 4.3}
 //	fmt.Println(p.ShowRound())
 //}
 
 func main() {
-	//draw_main()
-	//iface_run()
-	//mutexRun(true)
-	//iter_run()
-	struct_run()
-	//str_conv_run()
+	//basic_run.StringIterRun()
+	//basic_run.StrConvRun()
+	//basic_run.StructRun()
+	//basic_run.SelectChannelRun()
+	//basic_run.ChannelCommunicateWithCloseRun()
+	basic_run.PackageInstalledRun()
 }

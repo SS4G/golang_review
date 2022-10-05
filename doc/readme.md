@@ -1,3 +1,12 @@
+# 项目说明
+这个项目中的代码全部是学习golang 相关后端知识所用的基本代码。   
+都是由多个小的可以运行单元测试的模块组成 可以运行的入口函数都是以 xxx_run 格式定义的。    
+只要把每个xxx_run函数拷贝到main.go 的main func中运行即可。
+
+# golang实践学习笔记
+通过看书+实践的方式来学习golang后端的相关的知识。
+
+
 # 常用命令
 ## 设置环境
 - 设置gopath `export GOPATH="/Users/bytedance/Desktop/my_proj/golang_review"`
@@ -16,3 +25,5 @@
 
 # 内容说明
 这里的代码主要是学习go语言使用 都是一些基本的小样例练手用的
+更详细的积累    
+读书笔记 [G55的golang 读书学习笔记](https://note.youdao.com/s/YrvSqmG2)
