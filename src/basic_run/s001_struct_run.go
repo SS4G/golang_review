@@ -116,8 +116,9 @@ func StructRun() {
 	fmt.Println(student.Serialize())
 	fmt.Println(bankclerk.Serialize())
 	fmt.Println(hamster.Serialize())
-
+	// 直接定义接口变量 实际上并没与实例化对象
 	var animal1, animal2, animal3 Animal
+	// 可以直接将实例化后的对象赋值给他们实现的接口
 	animal1 = student
 	animal2 = bankclerk
 	animal3 = hamster
