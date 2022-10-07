@@ -59,7 +59,8 @@ func ReflectRun() {
 		}
 	}
 
-	//获取对应类的方法 并显示
+	//获取对应类的方法 并调用
+	//主要注意 *Plane 和 Plane 是两个不同的类型
 	for i := 0; i < iface_type.NumMethod(); i++ {
 		refMethod := iface_type.Method(i)
 		fmt.Printf("get method %s %v\n", refMethod.Name, refMethod.Type)
