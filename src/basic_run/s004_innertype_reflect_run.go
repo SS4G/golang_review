@@ -36,6 +36,8 @@ func (p Palne) Fly(postion string) {
 
 // 通过反射机制 来获取 interface{} 的具体值和type
 func ReflectRun() {
+	fmt.Printf("Begin: =================ReflectRun()=========================\n")
+
 	airbusA380 := Palne{"F5", "airbus", 144000002}
 	airbusA380_ptr := &airbusA380
 
@@ -68,4 +70,5 @@ func ReflectRun() {
 		args := []reflect.Value{reflect.ValueOf("sky")}
 		methodValue.Call(args)
 	}
+	fmt.Printf("End: =================ReflectRun()=========================\n")
 }

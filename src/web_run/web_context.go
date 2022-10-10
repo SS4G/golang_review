@@ -1,4 +1,4 @@
-package main
+package web_run
 
 import (
 	"context"

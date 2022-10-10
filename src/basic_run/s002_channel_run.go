@@ -62,6 +62,22 @@ func ChannelCommunicateWithCloseRun() {
 	fmt.Printf("End: =================ChannelCommunicateWithCloseRun()=========================\n")
 }
 
+// 对于无缓冲区的channel 如果channel被关闭 读取channel的item会直接返回0
+func ChannelCloseRun() {
+	ch := make(chan int)
+	go func() {
+		time.Sleep(time.Second * 2)
+		close(ch)
+	}()
+
+	go func() {
+		r := <-ch
+		fmt.Printf("channel closed %d\n", r)
+	}()
+
+	time.Sleep(4 * time.Second)
+}
+
 // 测试select 函数
 // 生产端 每个Round下 在一个随机的等待时间下 从3个channel 中随机挑选一个
 // 消费端 从四个channel 中通过select 获取数据 同时设置一个3ms超时的 time.After(time.Millisecond * 3)
