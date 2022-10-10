@@ -1,5 +1,7 @@
 package main
 
+import "sync_run"
+
 func main() {
 	//basic_run.StringIterRun()
 	//basic_run.StrConvRun()
@@ -20,4 +22,5 @@ func main() {
 	//sync_run.WithCancelMultiCtxRun(12)
 	//sync_run.WithDeadlineCtxRun(5, 1)
 	//sync_run.WithTimeOutCtxRun(3, 1, 2)
+	sync_run.WorkPoolRun(50)
 }
